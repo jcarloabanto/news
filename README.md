@@ -7,10 +7,15 @@ Each view is backed by a ViewModel that communicates with services through Proto
 Utilised a generic ViewState<T> enum to manage the UI lifecycle. This ensures "impossible states" are avoided and UI consistency is maintained.
 
 enum ViewState<T> {
+
     case loading
+    
     case loaded(T)
+    
     case empty
+    
     case error(String)
+    
 }
 
 💾 Persistence Layer
